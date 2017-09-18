@@ -79,10 +79,6 @@ func main() {
 	encoded := encode(str, codes)
 	decoded := hp.Decode(encoded)
 
-	for _, c := range codes {
-		fmt.Println(c)
-	}
-
 	fmt.Printf("%v\n%v\n%v\n", encoded, decoded, string(decoded))
 }
 
@@ -128,7 +124,7 @@ func encode(str string, codes []*Code) string {
 		}
 	}
 
-	encoded += " " // Empty bit
+	encoded += " " // Empty byte
 	return encoded
 }
 
